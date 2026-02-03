@@ -7,40 +7,137 @@ from pysat.card import ITotalizer
 
 
 
-def create_var_map(num_var, num_frequencies):
-    var_map = [[0] * (num_var + 1) for _ in range(num_frequencies + 1)]
+def create_var_map(vertices, num_frequencies):
+    var_map = [[0] * (num_frequencies) for _ in range(vertices)]
 
     top = 0
-    for i in range(1, num_var + 1):
-        for j in range(1, num_frequencies + 1):
+    for i in range(vertices):
+        for j in range(num_frequencies):
             top += 1
-            var_map[j][i] = top 
+            var_map[i][j] = top 
+    
+    return var_map, top # array 2 sided: var_map[vertex][frequency] = varnum
+    
 
-def create_penalty_var_map(last_var_num,):
+def add_constraints(solver, num_frequencies, ctr_file, type_eo):
     penalty_var_map = {}
-    
+    penalty_values = {}
+    with open(ctr_file) as f:
+        header = f.readline().strip().split()
+        vertices = int(header[2])
+        edges = int(header[3])
+        var_map, top = create_var_map(vertices, num_frequencies)
+        top = add_eo(solver, var_map, vertices, num_frequencies, top, type_eo)
+        penalty_var_map = {}
+        for line in f:
+            if line.strip() == '\x00':
+                continue
+            parts = line.strip().split()
+            if not parts:
+                continue
+            u, v = int(parts[1]), int(parts[2])
+            distance = int(parts[3])
+            penalty = int(parts[4])
+            top +=1
+            penalty_var_map[(u,v)] = top
+            penalty_values[(u,v)] = penalty
+            # print(f"distance for edge ({u},{v}) = {distance}, penalty = {penalty}")
+            for i in range(num_frequencies):
+                j_min = max(0, i - distance)
+                j_max = min(num_frequencies - 1, i + distance)
+                for j in range(j_min, j_max + 1):
+                    solver.add_clause([
+                        -var_map[u][i],
+                        -var_map[v][j],
+                        top
+                    ])
+                    # print(f"add clause: varmap[{u}][{i}]={var_map[u][i]} ^ varmap[{v}][{j}]={var_map[v][j]} -> penalty_var={top}")
 
-    
+    if edges != len(penalty_var_map):
+        raise ValueError(
+            f"Mismatch: edges={edges}, penalty_vars={len(penalty_var_map)}"
+    )
+    # print(f"edges:{edges}, length penalty vars:{len(penalty_var_map)}")
 
-    return 
 
-    
-    
-                            
-def create_label_var_map(labels, start_index):
-    label_var_map = {}
-    current = start_index
-    for lb in labels:
-        label_var_map[lb] = current
-        current += 1
-    return label_var_map
-    
-# ánh xạ biến active -> biến xác nhận label được sử dụng    
-def build_label_constraints(solver, var_map, label_var_map):
-    for (i, v), varnum in var_map.items():
-        lb_varnum = label_var_map[v]
-        solver.add_clause([-varnum, lb_varnum])
+    # vertices: number of vertices
+    # var_map: array 2 sided perform SAT variable: var_map[vertex][frequency]
+    # penalty_var_map: dict perform SAT variable: penalty_var_map((u,v), var)
+    # penalty_value: dict perform value of penalty of edge: penalty_value((u,v), value)
+    return vertices, var_map, penalty_var_map, penalty_values
+            
 
+def eo_pairwise(solver, var_map, vertices, num_frequencies, top):
+    for i in range(vertices):
+        solver.add_clause([var_map[i][j] for j in range(num_frequencies)]) # at least one
+        for j in range(num_frequencies - 1):
+            for k in range(j + 1, num_frequencies):
+                solver.add_clause([-var_map[i][j], -var_map[i][k]])
+    return top
+
+
+def eo_sc(solver, var_map, vertices, num_frequencies, top):
+    for i in range(vertices):
+
+        # AT LEAST ONE
+        solver.add_clause([var_map[i][j] for j in range(num_frequencies)])
+
+        # auxiliary vars s[0..F-2]
+        s = {}
+        for j in range(num_frequencies - 1):
+            top += 1
+            s[j] = top
+
+        # (¬x0 ∨ s0)
+        solver.add_clause([-var_map[i][0], s[0]])
+
+        for j in range(1, num_frequencies - 1):
+            # (¬xj ∨ sj)
+            solver.add_clause([-var_map[i][j], s[j]])
+
+            # (¬s_{j-1} ∨ sj)
+            solver.add_clause([-s[j - 1], s[j]])
+
+            # (¬xj ∨ ¬s_{j-1})
+            solver.add_clause([-var_map[i][j], -s[j - 1]])
+
+        # (¬x_{F-1} ∨ ¬s_{F-2})
+        solver.add_clause([
+            -var_map[i][num_frequencies - 1],
+            -s[num_frequencies - 2]
+        ])
+
+    return top
+
+def eo_nsc(solver, var_map, vertices, num_frequencies, top):
+    for i in range(1, vertices + 1):
+
+        s = {}
+        for j in range(1, num_frequencies):
+            top += 1
+            s[j] = top
+
+        # (¬x1 ∨ s1)
+        solver.add_clause([-var_map[i][1], s[1]])
+
+        # for j = 2 .. F-1
+        for j in range(2, num_frequencies):
+            # (¬xj ∨ sj)
+            solver.add_clause([-var_map[i][j], s[j]])
+
+            # (¬s_{j-1} ∨ s_j)
+            solver.add_clause([-s[j - 1], s[j]])
+
+            # (¬xj ∨ ¬s_{j-1})
+            solver.add_clause([-var_map[i][j], -s[j - 1]])
+
+        # last one: (¬xF ∨ ¬s_{F-1})
+        solver.add_clause([
+            -var_map[i][num_frequencies],
+            -s[num_frequencies - 1]
+        ])
+
+    return top
 def amk_nsc(solver, lits, K):
 
     if isinstance(lits, dict):
@@ -116,7 +213,7 @@ def amk_nsc_reduced(solver, lits, K):
             r[i][j] = top
     for i in range(K, n + 1):
         for j in range(1, K + 1):
-            top += 1
+            top += 1 
             r[i][j] = top
 
     # (1)  ¬x_i ∨ r(i,1)
@@ -224,7 +321,7 @@ def amk_tot(solver, lits, K):
 
     return tot.rhs
 
-def add_limit_label_constraints(solver, lits, K, strategy):
+def add_limit_total_penalty(solver, lits, K, strategy):
     if strategy == 'nsc':
         return amk_nsc(solver, lits, K)
     elif strategy == 'sc':
@@ -236,79 +333,126 @@ def add_limit_label_constraints(solver, lits, K, strategy):
     elif strategy == 'tot':
         return amk_tot(solver, lits, K)
 
-    
+def add_eo(solver, var_map, vertices, num_frequencies, top, strategy):
+    if strategy == "pairwise":
+        return eo_pairwise(solver, var_map, vertices, num_frequencies, top)
+    elif strategy == "sc":
+        return eo_sc(solver, var_map, vertices, num_frequencies, top)
+    elif strategy == "nsc":
+        return eo_nsc(solver, var_map, vertices, num_frequencies, top)
 
 
 
-def solve_and_print(solver, var_map, rhs, num_labels, type):
-    if type != 'incremental' and type != 'assumptions' and type != 'first':
+def solve_and_print(solver, var_map, rhs, total_penalty, type):
+    if type not in ('incremental', 'assumptions', 'first'):
         raise ValueError("Type must be either 'incremental', 'assumptions', or 'first'")
+
     if type == 'incremental':
-        solver.add_clause([-rhs[num_labels - 1]])
-    status = None
+        solver.add_clause([-rhs[total_penalty - 1]])
+
     if type == 'assumptions':
-        status = solver.solve(assumptions = [-rhs[num_labels - 1]]) 
-    else :
-        status = solver.solve()
-    if status:
-        model = solver.get_model()
-        assignment = {}
-        for (i, v), varnum in var_map.items():
-            if model[varnum-1] > 0:
-                assignment[i] = v
-        print("Solution:")
-        print(assignment)
-        return assignment
+        status = solver.solve(assumptions=[-rhs[total_penalty - 1]])
     else:
+        status = solver.solve()
+
+    if not status:
         print("Cannot find solution.")
         return None
 
-def verify_solution(assignment, var, var_file, ctr_file):
-    if assignment is None:
-        return False
-    with open(var_file) as f:
-        for line in f:
-            parts = line.strip().split()
-            if not parts:
-                continue
-            if len(parts) > 3:
-                if assignment[int(parts[0])] != int(parts[2]):
-                    return False
+    model = solver.get_model()
+    assignment = {}
+    for i in range(len(var_map)):
+        for v in range(len(var_map[i])):
+            varnum = var_map[i][v]
+            if varnum > 0 and model[varnum - 1] > 0:
+                if assignment.get(i) is not None:
+                    raise ValueError(f"Vertex {i} has multiple assigned frequencies")
+                assignment[i] = v
 
-    with open(ctr_file) as f:
+    # print("Solution:")
+    # print(assignment)
+
+
+    
+
+    return assignment
+
+
+def check_solution(ctr_file, assignment, vertices):
+
+    total_penalty = 0
+
+    with open(ctr_file, 'r') as f:
+        header = f.readline().strip().split()
+        edges = int(header[3])
+
         for line in f:
-            if line.strip() == '\x00':
+            if not line.strip() or line.strip() == '\x00':
                 continue
+
             parts = line.strip().split()
-            if not parts:
-                continue
-            i, j = int(parts[0]), int(parts[1])
-            if i not in assignment or j not in assignment:
-                return False
-            vi = assignment[i]
-            vj = assignment[j]
-            if(vi not in var[i]) or (vj not in var[j]):
-                return False
-            if '>' in parts:
-                distance = int(parts[4])
-                if abs(vi - vj) <= distance:
-                    print(f"\n{i} ({vi}) {j} ({vj}) <= {distance}")
-                    return False
-            elif '=' in parts:
-                value = int(parts[4])
-                if abs(vi - vj) != value:
-                    return False
-    return True
+            # if parts[0] != 'e':
+            #     continue
+
+            freq_count = {}
+
+            for v, f in assignment.items():
+                freq_count[v] = freq_count.get(v, 0) + 1
+
+            for v in range(vertices):
+                if v not in freq_count:
+                    raise ValueError(f"Vertex {v} has ZERO frequency")
+                if freq_count[v] != 1:
+                    raise ValueError(f"Vertex {v} has {freq_count[v]} frequencies")
+                
+
+            u = int(parts[1])
+            v = int(parts[2])
+            d = int(parts[3])
+            p = int(parts[4])
+
+            fu = assignment[u]
+            fv = assignment[v]
+
+            if abs(fu - fv) <= d:
+                if p == 0:
+                    raise ValueError(f"Penalty = 0 with constraint {u, v, d}")
+                else:
+                    total_penalty += p
+
+    print(f"Total penalty: {total_penalty}")
+    return total_penalty
+
 
 def main():
     start_time = time()
-    helpers = "Use: python3 main.py <dataset> <num_frequencies>\n"
+    helpers = "Use: python3 main.py <dataset> <num_frequencies> <type_eo> <type_amk> <solver> <strategy>\n"
 
-    dataset_folder = os.path.join("datasets", sys.argv[1])
+    dataset = os.path.join("datasets", sys.argv[1] + ".ctr.txt")
     num_frequencies = int(sys.argv[2])
-    if not os.path.exists(dataset_folder):
+    type_eo = sys.argv[3]
+    type_amk = sys.argv[4]
+    if not os.path.exists(dataset):
         print("Dataset folder does not exist.\n" + helpers)
         return
+    solver = Solver(name = sys.argv[5])
+    vertices, var_map, penalty_var_map, penalty_values = add_constraints(solver, num_frequencies, dataset, type_eo)
+    
+    assignment = solve_and_print(solver, var_map,None, None, 'first')
+    if assignment is None:
+        return
+    total_penalty = check_solution(dataset, assignment, vertices)
+    
+    
+    rhs = add_limit_total_penalty(solver, penalty_var_map, total_penalty, type_amk)
+
+    while total_penalty > 0 :
+        print("--------------------------------------------------")
+        print(f"\nTrying with at most {total_penalty - 1} penalty...")
+        assignment= solve_and_print(solver, var_map, rhs, total_penalty, sys.argv[6])
+        if assignment is None:
+            return
+        total_penalty =  check_solution(dataset, assignment, vertices)
    
 
 if __name__ == "__main__":
