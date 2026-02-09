@@ -1,0 +1,53 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		glucose4
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:38:12 2026
+[runlim] main pid:		14369
+Total penalty: 82
+Time: 0.01086115837097168
+--------------------------------------------------
+
+Trying with at most 81 penalty...
+Total penalty: 67
+Time: 0.1550617218017578
+--------------------------------------------------
+
+Trying with at most 66 penalty...
+Total penalty: 58
+Time: 0.2009131908416748
+--------------------------------------------------
+
+Trying with at most 57 penalty...
+Total penalty: 56
+Time: 4.950453996658325
+--------------------------------------------------
+
+Trying with at most 55 penalty...
+Total penalty: 53
+Time: 6.292226076126099
+--------------------------------------------------
+
+Trying with at most 52 penalty...
+Total penalty: 51
+Time: 7.40552020072937
+--------------------------------------------------
+
+Trying with at most 50 penalty...
+[runlim] end:			Sun Feb  8 21:38:22 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.04 seconds
+[runlim] time:			9.39 seconds
+[runlim] space:			61.1 MB
+[runlim] samples:		99

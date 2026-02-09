@@ -1,0 +1,44 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		minicard
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:39:22 2026
+[runlim] main pid:		14964
+Total penalty: 66
+Time: 0.009226560592651367
+--------------------------------------------------
+
+Trying with at most 65 penalty...
+Total penalty: 63
+Time: 0.12877869606018066
+--------------------------------------------------
+
+Trying with at most 62 penalty...
+Total penalty: 55
+Time: 1.724301815032959
+--------------------------------------------------
+
+Trying with at most 54 penalty...
+Total penalty: 47
+Time: 7.471049785614014
+--------------------------------------------------
+
+Trying with at most 46 penalty...
+[runlim] sample:		9.4 time, 10.0 real, 48.5 MB
+[runlim] end:			Sun Feb  8 21:39:32 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.06 seconds
+[runlim] time:			9.37 seconds
+[runlim] space:			54.2 MB
+[runlim] samples:		100

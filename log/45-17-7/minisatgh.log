@@ -1,0 +1,34 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		minisatgh
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:39:42 2026
+[runlim] main pid:		15153
+Traceback (most recent call last):
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/two_solver.py", line 537, in <module>
+    main()
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/two_solver.py", line 510, in main
+    solver = Solver(name = sys.argv[5])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/satsolver/.local/lib/python3.12/site-packages/pysat/solvers.py", line 372, in __init__
+    self.new(name, bootstrap_with, use_timer, **kwargs)
+  File "/home/satsolver/.local/lib/python3.12/site-packages/pysat/solvers.py", line 449, in new
+    raise(NoSuchSolverError(name))
+pysat.solvers.NoSuchSolverError: minisatgh
+[runlim] end:			Sun Feb  8 21:39:42 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] real:			0.22 seconds
+[runlim] time:			0.08 seconds
+[runlim] space:			33.0 MB
+[runlim] samples:		1

@@ -1,0 +1,64 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		Test95
+[runlim] argv[4]:		36
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		minisat22
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:31:31 2026
+[runlim] main pid:		12754
+Total penalty: 64
+Time: 0.11142945289611816
+--------------------------------------------------
+
+Trying with at most 63 penalty...
+Total penalty: 29
+Time: 0.6779534816741943
+--------------------------------------------------
+
+Trying with at most 28 penalty...
+Total penalty: 26
+Time: 1.8667237758636475
+--------------------------------------------------
+
+Trying with at most 25 penalty...
+Total penalty: 23
+Time: 3.0589184761047363
+--------------------------------------------------
+
+Trying with at most 22 penalty...
+Total penalty: 22
+Time: 4.406416177749634
+--------------------------------------------------
+
+Trying with at most 21 penalty...
+Total penalty: 20
+Time: 4.839881420135498
+--------------------------------------------------
+
+Trying with at most 19 penalty...
+Total penalty: 18
+Time: 6.251115560531616
+--------------------------------------------------
+
+Trying with at most 17 penalty...
+Total penalty: 15
+Time: 8.030037641525269
+--------------------------------------------------
+
+Trying with at most 14 penalty...
+[runlim] sample:		9.4 time, 10.1 real, 120.8 MB
+[runlim] end:			Sun Feb  8 21:31:41 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.08 seconds
+[runlim] time:			9.41 seconds
+[runlim] space:			122.6 MB
+[runlim] samples:		100

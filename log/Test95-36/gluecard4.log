@@ -1,0 +1,68 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		Test95
+[runlim] argv[4]:		36
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		gluecard4
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:29:51 2026
+[runlim] main pid:		11929
+Total penalty: 81
+Time: 0.11740899085998535
+--------------------------------------------------
+
+Trying with at most 80 penalty...
+Total penalty: 36
+Time: 0.8001523017883301
+--------------------------------------------------
+
+Trying with at most 35 penalty...
+Total penalty: 28
+Time: 0.8987226486206055
+--------------------------------------------------
+
+Trying with at most 27 penalty...
+Total penalty: 25
+Time: 1.2074594497680664
+--------------------------------------------------
+
+Trying with at most 24 penalty...
+Total penalty: 20
+Time: 2.0690033435821533
+--------------------------------------------------
+
+Trying with at most 19 penalty...
+Total penalty: 17
+Time: 3.0200579166412354
+--------------------------------------------------
+
+Trying with at most 16 penalty...
+Total penalty: 15
+Time: 4.446166276931763
+--------------------------------------------------
+
+Trying with at most 14 penalty...
+Total penalty: 14
+Time: 5.795416831970215
+--------------------------------------------------
+
+Trying with at most 13 penalty...
+Total penalty: 13
+Time: 9.830089569091797
+--------------------------------------------------
+
+Trying with at most 12 penalty...
+[runlim] end:			Sun Feb  8 21:30:01 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.04 seconds
+[runlim] time:			9.50 seconds
+[runlim] space:			125.4 MB
+[runlim] samples:		99

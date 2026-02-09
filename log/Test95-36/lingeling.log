@@ -1,0 +1,83 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		Test95
+[runlim] argv[4]:		36
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		lingeling
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:30:31 2026
+[runlim] main pid:		12257
+Total penalty: 1214
+Time: 0.21038389205932617
+--------------------------------------------------
+
+Trying with at most 1213 penalty...
+Total penalty: 1158
+Time: 2.9758293628692627
+--------------------------------------------------
+
+Trying with at most 1157 penalty...
+Total penalty: 894
+Time: 3.4375336170196533
+--------------------------------------------------
+
+Trying with at most 893 penalty...
+Total penalty: 893
+Time: 3.5882346630096436
+--------------------------------------------------
+
+Trying with at most 892 penalty...
+Total penalty: 378
+Time: 3.9835386276245117
+--------------------------------------------------
+
+Trying with at most 377 penalty...
+Total penalty: 89
+Time: 5.242201089859009
+--------------------------------------------------
+
+Trying with at most 88 penalty...
+Total penalty: 34
+Time: 5.586439847946167
+--------------------------------------------------
+
+Trying with at most 33 penalty...
+Total penalty: 31
+Time: 5.6906609535217285
+--------------------------------------------------
+
+Trying with at most 30 penalty...
+Total penalty: 27
+Time: 7.098295450210571
+--------------------------------------------------
+
+Trying with at most 26 penalty...
+Total penalty: 25
+Time: 7.377338886260986
+--------------------------------------------------
+
+Trying with at most 24 penalty...
+Total penalty: 19
+Time: 7.532342433929443
+--------------------------------------------------
+
+Trying with at most 18 penalty...
+Total penalty: 18
+Time: 8.957600116729736
+--------------------------------------------------
+
+Trying with at most 17 penalty...
+[runlim] end:			Sun Feb  8 21:30:41 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.05 seconds
+[runlim] time:			9.44 seconds
+[runlim] space:			563.0 MB
+[runlim] samples:		99

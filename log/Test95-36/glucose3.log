@@ -1,0 +1,79 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		Test95
+[runlim] argv[4]:		36
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		glucose3
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:30:01 2026
+[runlim] main pid:		12009
+Total penalty: 78
+Time: 0.12093997001647949
+--------------------------------------------------
+
+Trying with at most 77 penalty...
+Total penalty: 36
+Time: 0.8014869689941406
+--------------------------------------------------
+
+Trying with at most 35 penalty...
+Total penalty: 34
+Time: 0.9024496078491211
+--------------------------------------------------
+
+Trying with at most 33 penalty...
+Total penalty: 32
+Time: 0.955758810043335
+--------------------------------------------------
+
+Trying with at most 31 penalty...
+Total penalty: 29
+Time: 1.0171325206756592
+--------------------------------------------------
+
+Trying with at most 28 penalty...
+Total penalty: 27
+Time: 1.0741760730743408
+--------------------------------------------------
+
+Trying with at most 26 penalty...
+Total penalty: 23
+Time: 1.179170846939087
+--------------------------------------------------
+
+Trying with at most 22 penalty...
+Total penalty: 21
+Time: 1.306877851486206
+--------------------------------------------------
+
+Trying with at most 20 penalty...
+Total penalty: 19
+Time: 3.011226177215576
+--------------------------------------------------
+
+Trying with at most 18 penalty...
+Total penalty: 17
+Time: 7.423728704452515
+--------------------------------------------------
+
+Trying with at most 16 penalty...
+Total penalty: 15
+Time: 9.086455583572388
+--------------------------------------------------
+
+Trying with at most 14 penalty...
+[runlim] sample:		9.6 time, 10.0 real, 92.9 MB
+[runlim] end:			Sun Feb  8 21:30:11 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.07 seconds
+[runlim] time:			9.59 seconds
+[runlim] space:			124.4 MB
+[runlim] samples:		100

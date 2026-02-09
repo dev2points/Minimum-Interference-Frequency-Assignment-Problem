@@ -1,0 +1,59 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		maplecm
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:38:52 2026
+[runlim] main pid:		14718
+Total penalty: 85
+Time: 0.01269221305847168
+--------------------------------------------------
+
+Trying with at most 84 penalty...
+Total penalty: 67
+Time: 0.16201257705688477
+--------------------------------------------------
+
+Trying with at most 66 penalty...
+Total penalty: 61
+Time: 0.9936873912811279
+--------------------------------------------------
+
+Trying with at most 60 penalty...
+Total penalty: 58
+Time: 1.0339407920837402
+--------------------------------------------------
+
+Trying with at most 57 penalty...
+Total penalty: 56
+Time: 3.033470869064331
+--------------------------------------------------
+
+Trying with at most 55 penalty...
+Total penalty: 51
+Time: 7.626178979873657
+--------------------------------------------------
+
+Trying with at most 50 penalty...
+Total penalty: 50
+Time: 9.11478042602539
+--------------------------------------------------
+
+Trying with at most 49 penalty...
+[runlim] sample:		9.5 time, 10.1 real, 56.8 MB
+[runlim] end:			Sun Feb  8 21:39:02 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.11 seconds
+[runlim] time:			9.50 seconds
+[runlim] space:			59.7 MB
+[runlim] samples:		100

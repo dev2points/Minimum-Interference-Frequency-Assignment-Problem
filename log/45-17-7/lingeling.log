@@ -1,0 +1,94 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		lingeling
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:38:32 2026
+[runlim] main pid:		14541
+Total penalty: 482
+Time: 0.011548995971679688
+--------------------------------------------------
+
+Trying with at most 481 penalty...
+Total penalty: 472
+Time: 0.43758416175842285
+--------------------------------------------------
+
+Trying with at most 471 penalty...
+Total penalty: 425
+Time: 0.5043270587921143
+--------------------------------------------------
+
+Trying with at most 424 penalty...
+Total penalty: 335
+Time: 0.6248946189880371
+--------------------------------------------------
+
+Trying with at most 334 penalty...
+Total penalty: 184
+Time: 0.7100229263305664
+--------------------------------------------------
+
+Trying with at most 183 penalty...
+Total penalty: 103
+Time: 0.7757303714752197
+--------------------------------------------------
+
+Trying with at most 102 penalty...
+Total penalty: 75
+Time: 0.8224096298217773
+--------------------------------------------------
+
+Trying with at most 74 penalty...
+Total penalty: 72
+Time: 0.8593053817749023
+--------------------------------------------------
+
+Trying with at most 71 penalty...
+Total penalty: 70
+Time: 0.8927981853485107
+--------------------------------------------------
+
+Trying with at most 69 penalty...
+Total penalty: 67
+Time: 0.9240548610687256
+--------------------------------------------------
+
+Trying with at most 66 penalty...
+Total penalty: 63
+Time: 1.7998287677764893
+--------------------------------------------------
+
+Trying with at most 62 penalty...
+Total penalty: 60
+Time: 4.767226457595825
+--------------------------------------------------
+
+Trying with at most 59 penalty...
+Total penalty: 58
+Time: 8.213262796401978
+--------------------------------------------------
+
+Trying with at most 57 penalty...
+[runlim] sample:		9.6 time, 8.5 real, 88.1 MB
+Total penalty: 57
+Time: 9.434418678283691
+--------------------------------------------------
+
+Trying with at most 56 penalty...
+[runlim] end:			Sun Feb  8 21:38:42 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.06 seconds
+[runlim] time:			11.00 seconds
+[runlim] space:			100.4 MB
+[runlim] samples:		115

@@ -1,0 +1,79 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		Test95
+[runlim] argv[4]:		36
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		gluecard3
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:29:41 2026
+[runlim] main pid:		11847
+Total penalty: 78
+Time: 0.11896443367004395
+--------------------------------------------------
+
+Trying with at most 77 penalty...
+Total penalty: 36
+Time: 0.7932918071746826
+--------------------------------------------------
+
+Trying with at most 35 penalty...
+Total penalty: 34
+Time: 0.8904609680175781
+--------------------------------------------------
+
+Trying with at most 33 penalty...
+Total penalty: 32
+Time: 0.9410557746887207
+--------------------------------------------------
+
+Trying with at most 31 penalty...
+Total penalty: 29
+Time: 1.001206636428833
+--------------------------------------------------
+
+Trying with at most 28 penalty...
+Total penalty: 27
+Time: 1.0589361190795898
+--------------------------------------------------
+
+Trying with at most 26 penalty...
+Total penalty: 23
+Time: 1.1603312492370605
+--------------------------------------------------
+
+Trying with at most 22 penalty...
+Total penalty: 21
+Time: 1.2987189292907715
+--------------------------------------------------
+
+Trying with at most 20 penalty...
+Total penalty: 19
+Time: 3.065349578857422
+--------------------------------------------------
+
+Trying with at most 18 penalty...
+Total penalty: 17
+Time: 5.890304088592529
+--------------------------------------------------
+
+Trying with at most 16 penalty...
+Total penalty: 15
+Time: 7.577857971191406
+--------------------------------------------------
+
+Trying with at most 14 penalty...
+[runlim] sample:		9.6 time, 8.7 real, 92.6 MB
+[runlim] end:			Sun Feb  8 21:29:51 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.11 seconds
+[runlim] time:			10.96 seconds
+[runlim] space:			124.2 MB
+[runlim] samples:		114

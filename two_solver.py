@@ -54,6 +54,34 @@ def add_constraints(solver, num_frequencies, ctr_file, type_eo):
                     ])
                     # print(f"add clause: varmap[{u}][{i}]={var_map[u][i]} ^ varmap[{v}][{j}]={var_map[v][j]} -> penalty_var={top}")
 
+            # violation_vars = []
+
+            # # tạo biến phụ c_ij
+            # for i in range(num_frequencies):
+            #     j_min = max(0, i - distance)
+            #     j_max = min(num_frequencies - 1, i + distance)
+
+            #     for j in range(j_min, j_max + 1):
+            #         top += 1
+            #         c_ij = top
+            #         violation_vars.append(c_ij)
+
+            #         # c_ij ↔ (x_u_i ∧ x_v_j)
+            #         solver.add_clause([-c_ij, var_map[u][i]])
+            #         solver.add_clause([-c_ij, var_map[v][j]])
+            #         solver.add_clause([
+            #             -var_map[u][i],
+            #             -var_map[v][j],
+            #             c_ij
+            #         ])
+
+            #         # c_ij ⇒ p_uv
+            #         solver.add_clause([-c_ij, penalty_var_map[(u, v)]])
+
+            # # p_uv ⇒ OR(c_ij)
+            # # (¬p_uv ∨ c1 ∨ c2 ∨ ... ∨ ck)
+            # solver.add_clause([-penalty_var_map[(u, v)]] + violation_vars)
+
     if edges != len(penalty_var_map):
         raise ValueError(
             f"Mismatch: edges={edges}, penalty_vars={len(penalty_var_map)}"
@@ -120,7 +148,7 @@ def eo_card(solver, var_map, vertices, num_frequencies, top,
         EncType.cardnetwrk
         ...
     """
-    encoding = int(encoding)
+    encoding = int(encoding.split('_')[-1])
     if encoding < 0 or encoding > 9:
         raise ValueError(
             "Card type:\n"
@@ -152,6 +180,54 @@ def eo_card(solver, var_map, vertices, num_frequencies, top,
 
     return top
 
+from pysat.pb import PBEnc
+
+def eo_pb(solver, var_map, vertices, num_frequencies, top,
+          encoding):
+    """
+    encoding:
+        EncType.seqcounter   (khuyến nghị)
+        EncType.pairwise
+        EncType.totalizer
+        EncType.cardnetwrk
+        ...
+    """
+    encoding = int(encoding.split('_')[-1])
+    if encoding < 0 or encoding > 9:
+        raise ValueError(
+            "PB type:\n"
+            "    pairwise    = 0\n"
+            "    seqcounter  = 1\n"
+            "    sortnetwrk  = 2\n"
+            "    cardnetwrk  = 3\n"
+            "    bitwise     = 4\n"
+            "    ladder      = 5\n"
+            "    totalizer   = 6\n"
+            "    mtotalizer  = 7\n"
+            "    kmtotalizer = 8\n"
+            "    native      = 9"
+        )
+
+    for i in range(vertices):
+        lits = [var_map[i][j] for j in range(num_frequencies)]
+        weights = [1] * num_frequencies
+
+        pb = PBEnc.equals(
+            lits=lits,
+            weights=weights,
+            bound=1,
+            encoding=encoding,
+            top_id=top
+        )
+
+        top = pb.nv  # cập nhật biến phụ
+
+        for c in pb.clauses:
+            solver.add_clause(c)
+
+    return top
+
+
 def eo_nsc(solver, var_map, vertices, num_frequencies, top):
     for i in range(vertices):
 
@@ -170,7 +246,11 @@ def eo_nsc(solver, var_map, vertices, num_frequencies, top):
         solver.add_clause([r[num_frequencies-1]]) # at least one
 
         for j in range(1, num_frequencies):
-            solver.add_clause([-var_map[i][j], -r[j-1]])
+            solver.add_clause([-var_map[i][j], -r[j-1]]) # at most one
+
+        # #at most one
+        # for j in range(1, num_frequencies):
+        #     solver.add_clause([-var_map[j], -r[j-1]])
 
     return top
 
@@ -182,9 +262,13 @@ def add_eo(solver, var_map, vertices, num_frequencies, top, strategy):
         return eo_sc(solver, var_map, vertices, num_frequencies, top)
     elif strategy == "pairwise":
         return eo_pairwise(solver, var_map, vertices, num_frequencies, top)
-    else:
+    elif strategy.startswith("card"):
         return eo_card(solver, var_map, vertices, num_frequencies, top, strategy)
+    elif strategy.startswith("pb"):
+        return eo_pb(solver, var_map, vertices, num_frequencies, top, strategy)
     
+
+
 
 def amk_nsc(solver, lits, K):
 
@@ -486,7 +570,11 @@ def main():
     total_penalty = check_solution(dataset, assignment, vertices)
     print(f"Time: {time() - start_time}")
     
-    
+    solver.delete()
+
+    solver = Solver(name="cadical195")
+    vertices, var_map, penalty_var_map, penalty_values = add_constraints(solver, num_frequencies, dataset, type_eo)
+
     rhs = add_limit_total_penalty(solver, penalty_var_map, total_penalty, type_amk)
 
     while total_penalty > 0 :
@@ -497,6 +585,7 @@ def main():
             return
         total_penalty =  check_solution(dataset, assignment, vertices)
         print(f"Time: {time() - start_time}")
+   
 
 if __name__ == "__main__":
     main()

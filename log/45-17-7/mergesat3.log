@@ -1,0 +1,43 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		two_solver.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		nsc
+[runlim] argv[6]:		nsc
+[runlim] argv[7]:		mergesat3
+[runlim] argv[8]:		incremental
+[runlim] start:			Sun Feb  8 21:39:12 2026
+[runlim] main pid:		14875
+Total penalty: 80
+Time: 0.010734319686889648
+--------------------------------------------------
+
+Trying with at most 79 penalty...
+Total penalty: 67
+Time: 0.15680646896362305
+--------------------------------------------------
+
+Trying with at most 66 penalty...
+Total penalty: 59
+Time: 2.2652084827423096
+--------------------------------------------------
+
+Trying with at most 58 penalty...
+Total penalty: 53
+Time: 7.725945949554443
+--------------------------------------------------
+
+Trying with at most 52 penalty...
+[runlim] end:			Sun Feb  8 21:39:22 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			10.04 seconds
+[runlim] time:			9.38 seconds
+[runlim] space:			59.6 MB
+[runlim] samples:		99
