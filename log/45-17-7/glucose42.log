@@ -1,54 +1,84 @@
 [runlim] version:		1.10
 [runlim] time limit:		311040000 seconds
-[runlim] real time limit:	10 seconds
+[runlim] real time limit:	60 seconds
 [runlim] space limit:		7759 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
-[runlim] argv[2]:		two_solver.py
+[runlim] argv[2]:		test.py
 [runlim] argv[3]:		45-17
 [runlim] argv[4]:		7
 [runlim] argv[5]:		nsc
-[runlim] argv[6]:		nsc
+[runlim] argv[6]:		tot
 [runlim] argv[7]:		glucose42
-[runlim] argv[8]:		incremental
-[runlim] start:			Sun Feb  8 21:38:22 2026
-[runlim] main pid:		14455
-Total penalty: 82
-Time: 0.00955343246459961
+[runlim] argv[8]:		assumptions
+[runlim] start:			Mon Feb  9 16:39:04 2026
+[runlim] main pid:		31020
+Total penalty: 66
+Time: 0.008362293243408203
 --------------------------------------------------
 
-Trying with at most 81 penalty...
-Total penalty: 67
-Time: 0.15356707572937012
+Trying with at most 65 penalty...
+Total penalty: 64
+Time: 0.05204606056213379
 --------------------------------------------------
 
-Trying with at most 66 penalty...
-Total penalty: 58
-Time: 0.19478845596313477
+Trying with at most 63 penalty...
+Total penalty: 62
+Time: 0.05600380897521973
 --------------------------------------------------
 
-Trying with at most 57 penalty...
-Total penalty: 56
-Time: 5.047452211380005
+Trying with at most 61 penalty...
+Total penalty: 55
+Time: 0.06499052047729492
 --------------------------------------------------
 
-Trying with at most 55 penalty...
-Total penalty: 53
-Time: 6.306277275085449
+Trying with at most 54 penalty...
+Total penalty: 52
+Time: 0.5346372127532959
 --------------------------------------------------
 
-Trying with at most 52 penalty...
-Total penalty: 51
-Time: 7.435484170913696
+Trying with at most 51 penalty...
+Total penalty: 50
+Time: 0.6355292797088623
 --------------------------------------------------
 
-Trying with at most 50 penalty...
-[runlim] sample:		9.6 time, 10.0 real, 54.3 MB
-[runlim] end:			Sun Feb  8 21:38:32 2026
+Trying with at most 49 penalty...
+Total penalty: 48
+Time: 0.6392958164215088
+--------------------------------------------------
+
+Trying with at most 47 penalty...
+Total penalty: 46
+Time: 7.0514075756073
+--------------------------------------------------
+
+Trying with at most 45 penalty...
+[runlim] sample:		9.9 time, 10.1 real, 40.2 MB
+[runlim] sample:		20.0 time, 20.1 real, 46.5 MB
+[runlim] sample:		30.0 time, 30.1 real, 56.0 MB
+Total penalty: 45
+Time: 34.07941222190857
+--------------------------------------------------
+
+Trying with at most 44 penalty...
+Total penalty: 43
+Time: 34.08505320549011
+--------------------------------------------------
+
+Trying with at most 42 penalty...
+[runlim] sample:		40.0 time, 40.1 real, 58.8 MB
+Total penalty: 41
+Time: 46.7372727394104
+--------------------------------------------------
+
+Trying with at most 40 penalty...
+[runlim] sample:		50.0 time, 50.1 real, 60.9 MB
+[runlim] sample:		60.0 time, 60.1 real, 62.2 MB
+[runlim] end:			Mon Feb  9 16:40:04 2026
 [runlim] status:		out of time
 [runlim] result:		2
 [runlim] children:		0
-[runlim] real:			10.07 seconds
-[runlim] time:			9.56 seconds
-[runlim] space:			57.4 MB
-[runlim] samples:		100
+[runlim] real:			60.09 seconds
+[runlim] time:			60.01 seconds
+[runlim] space:			62.2 MB
+[runlim] samples:		600

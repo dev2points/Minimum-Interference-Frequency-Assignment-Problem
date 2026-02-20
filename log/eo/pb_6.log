@@ -1,0 +1,32 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	600 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		test.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		pb_6
+[runlim] argv[6]:		tot
+[runlim] argv[7]:		cadical103
+[runlim] argv[8]:		assumptions
+[runlim] start:			Mon Feb  9 20:43:31 2026
+[runlim] main pid:		112981
+Traceback (most recent call last):
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 610, in <module>
+    main()
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 586, in main
+    total_penalty = check_solution(dataset, assignment, vertices)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 546, in check_solution
+    raise ValueError(f"Vertex {v} has ZERO frequency")
+ValueError: Vertex 0 has ZERO frequency
+[runlim] end:			Mon Feb  9 20:43:31 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] real:			0.21 seconds
+[runlim] time:			0.04 seconds
+[runlim] space:			19.2 MB
+[runlim] samples:		1

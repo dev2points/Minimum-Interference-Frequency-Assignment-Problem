@@ -1,22 +1,24 @@
 [runlim] version:		1.10
 [runlim] time limit:		311040000 seconds
-[runlim] real time limit:	10 seconds
+[runlim] real time limit:	60 seconds
 [runlim] space limit:		7759 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
-[runlim] argv[2]:		two_solver.py
+[runlim] argv[2]:		test.py
 [runlim] argv[3]:		45-17
 [runlim] argv[4]:		7
 [runlim] argv[5]:		nsc
-[runlim] argv[6]:		nsc
+[runlim] argv[6]:		tot
 [runlim] argv[7]:		cryptominisat
-[runlim] argv[8]:		incremental
-[runlim] start:			Sun Feb  8 21:37:42 2026
-[runlim] main pid:		14130
+[runlim] argv[8]:		assumptions
+[runlim] start:			Mon Feb  9 16:35:04 2026
+[runlim] main pid:		29422
+Total penalty: 66
+Time: 0.00899648666381836
 Traceback (most recent call last):
-  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/two_solver.py", line 537, in <module>
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 610, in <module>
     main()
-  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/two_solver.py", line 510, in main
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 592, in main
     solver = Solver(name = sys.argv[5])
              ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/satsolver/.local/lib/python3.12/site-packages/pysat/solvers.py", line 372, in __init__
@@ -28,7 +30,7 @@ Traceback (most recent call last):
     assert cms_present, 'Package \'pycryptosat\' is unavailable. Check your installation.'
            ^^^^^^^^^^^
 AssertionError: Package 'pycryptosat' is unavailable. Check your installation.
-Exception ignored in: <function CryptoMinisat.__del__ at 0x71e3297bd760>
+Exception ignored in: <function CryptoMinisat.__del__ at 0x7d55708bd760>
 Traceback (most recent call last):
   File "/home/satsolver/.local/lib/python3.12/site-packages/pysat/solvers.py", line 7314, in __del__
     self.delete()
@@ -36,11 +38,11 @@ Traceback (most recent call last):
     if self.cryptosat:
        ^^^^^^^^^^^^^^
 AttributeError: 'CryptoMinisat' object has no attribute 'cryptosat'
-[runlim] end:			Sun Feb  8 21:37:42 2026
+[runlim] end:			Mon Feb  9 16:35:04 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		0
-[runlim] real:			0.24 seconds
-[runlim] time:			0.08 seconds
-[runlim] space:			31.9 MB
+[runlim] real:			0.17 seconds
+[runlim] time:			0.09 seconds
+[runlim] space:			33.1 MB
 [runlim] samples:		1

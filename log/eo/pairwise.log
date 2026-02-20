@@ -1,0 +1,173 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	600 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		test.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		pairwise
+[runlim] argv[6]:		tot
+[runlim] argv[7]:		cadical103
+[runlim] argv[8]:		assumptions
+[runlim] start:			Mon Feb  9 18:03:31 2026
+[runlim] main pid:		55132
+Total penalty: 64
+Time: 0.00779271125793457
+--------------------------------------------------
+
+Trying with at most 63 penalty...
+Total penalty: 61
+Time: 0.23667454719543457
+--------------------------------------------------
+
+Trying with at most 60 penalty...
+Total penalty: 56
+Time: 0.24414968490600586
+--------------------------------------------------
+
+Trying with at most 55 penalty...
+Total penalty: 55
+Time: 0.3958277702331543
+--------------------------------------------------
+
+Trying with at most 54 penalty...
+Total penalty: 54
+Time: 0.8359637260437012
+--------------------------------------------------
+
+Trying with at most 53 penalty...
+Total penalty: 53
+Time: 2.1300485134124756
+--------------------------------------------------
+
+Trying with at most 52 penalty...
+Total penalty: 51
+Time: 3.4375369548797607
+--------------------------------------------------
+
+Trying with at most 50 penalty...
+Total penalty: 50
+Time: 4.601997137069702
+--------------------------------------------------
+
+Trying with at most 49 penalty...
+Total penalty: 49
+Time: 6.018122911453247
+--------------------------------------------------
+
+Trying with at most 48 penalty...
+Total penalty: 47
+Time: 7.889351844787598
+--------------------------------------------------
+
+Trying with at most 46 penalty...
+Total penalty: 45
+Time: 7.897243022918701
+--------------------------------------------------
+
+Trying with at most 44 penalty...
+Total penalty: 43
+Time: 9.360540866851807
+--------------------------------------------------
+
+Trying with at most 42 penalty...
+[runlim] sample:		10.0 time, 10.0 real, 44.4 MB
+Total penalty: 42
+Time: 16.53550910949707
+--------------------------------------------------
+
+Trying with at most 41 penalty...
+[runlim] sample:		20.0 time, 20.0 real, 45.1 MB
+[runlim] sample:		30.0 time, 30.0 real, 51.2 MB
+[runlim] sample:		40.0 time, 40.0 real, 53.6 MB
+[runlim] sample:		50.0 time, 50.0 real, 53.1 MB
+Total penalty: 41
+Time: 51.76396989822388
+--------------------------------------------------
+
+Trying with at most 40 penalty...
+Total penalty: 40
+Time: 59.07473373413086
+--------------------------------------------------
+
+Trying with at most 39 penalty...
+[runlim] sample:		60.0 time, 60.0 real, 61.3 MB
+[runlim] sample:		70.0 time, 70.0 real, 69.2 MB
+[runlim] sample:		80.0 time, 80.0 real, 61.9 MB
+[runlim] sample:		90.0 time, 90.0 real, 78.9 MB
+[runlim] sample:		100.0 time, 100.0 real, 84.0 MB
+Total penalty: 39
+Time: 105.9635362625122
+--------------------------------------------------
+
+Trying with at most 38 penalty...
+[runlim] sample:		110.0 time, 110.0 real, 69.5 MB
+[runlim] sample:		120.0 time, 120.0 real, 79.6 MB
+[runlim] sample:		130.0 time, 130.0 real, 79.6 MB
+[runlim] sample:		140.0 time, 140.0 real, 79.6 MB
+[runlim] sample:		150.0 time, 150.0 real, 92.2 MB
+[runlim] sample:		160.0 time, 160.0 real, 64.1 MB
+[runlim] sample:		170.0 time, 170.0 real, 89.2 MB
+[runlim] sample:		180.0 time, 180.0 real, 89.2 MB
+[runlim] sample:		190.0 time, 190.0 real, 71.4 MB
+[runlim] sample:		200.0 time, 200.0 real, 81.7 MB
+[runlim] sample:		210.0 time, 210.0 real, 84.9 MB
+[runlim] sample:		220.0 time, 220.0 real, 88.0 MB
+[runlim] sample:		230.0 time, 230.0 real, 99.7 MB
+[runlim] sample:		240.0 time, 240.0 real, 99.7 MB
+[runlim] sample:		250.0 time, 250.0 real, 101.5 MB
+[runlim] sample:		260.0 time, 260.0 real, 114.2 MB
+[runlim] sample:		270.0 time, 270.0 real, 114.2 MB
+[runlim] sample:		280.0 time, 280.0 real, 78.3 MB
+[runlim] sample:		290.0 time, 290.0 real, 91.4 MB
+[runlim] sample:		300.0 time, 300.0 real, 110.8 MB
+[runlim] sample:		310.1 time, 310.0 real, 114.8 MB
+Total penalty: 38
+Time: 318.33240580558777
+--------------------------------------------------
+
+Trying with at most 37 penalty...
+[runlim] sample:		320.0 time, 320.0 real, 105.0 MB
+[runlim] sample:		330.0 time, 330.0 real, 105.0 MB
+[runlim] sample:		340.0 time, 340.0 real, 118.6 MB
+[runlim] sample:		350.0 time, 350.0 real, 118.6 MB
+[runlim] sample:		360.0 time, 360.0 real, 118.6 MB
+[runlim] sample:		370.0 time, 370.0 real, 118.6 MB
+[runlim] sample:		380.0 time, 380.0 real, 118.6 MB
+[runlim] sample:		390.0 time, 390.0 real, 118.6 MB
+[runlim] sample:		400.0 time, 400.0 real, 118.6 MB
+[runlim] sample:		410.0 time, 410.0 real, 118.6 MB
+[runlim] sample:		420.0 time, 420.0 real, 118.6 MB
+[runlim] sample:		430.0 time, 430.0 real, 118.6 MB
+[runlim] sample:		440.0 time, 440.0 real, 118.6 MB
+[runlim] sample:		450.0 time, 450.0 real, 118.6 MB
+[runlim] sample:		460.0 time, 460.0 real, 118.6 MB
+[runlim] sample:		470.0 time, 470.0 real, 120.9 MB
+[runlim] sample:		480.0 time, 480.0 real, 120.9 MB
+[runlim] sample:		490.0 time, 490.0 real, 120.9 MB
+[runlim] sample:		500.0 time, 500.0 real, 121.4 MB
+[runlim] sample:		510.0 time, 510.0 real, 138.9 MB
+[runlim] sample:		520.0 time, 520.0 real, 138.9 MB
+[runlim] sample:		530.0 time, 530.0 real, 138.9 MB
+[runlim] sample:		540.0 time, 540.0 real, 138.9 MB
+[runlim] sample:		550.0 time, 550.0 real, 138.9 MB
+[runlim] sample:		560.0 time, 560.0 real, 141.4 MB
+[runlim] sample:		570.0 time, 570.0 real, 109.1 MB
+Total penalty: 37
+Time: 573.0379235744476
+--------------------------------------------------
+
+Trying with at most 36 penalty...
+[runlim] sample:		580.0 time, 580.0 real, 126.7 MB
+[runlim] sample:		590.0 time, 590.0 real, 126.7 MB
+[runlim] sample:		600.0 time, 600.0 real, 126.7 MB
+[runlim] end:			Mon Feb  9 18:13:31 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			600.06 seconds
+[runlim] time:			600.04 seconds
+[runlim] space:			141.4 MB
+[runlim] samples:		6000

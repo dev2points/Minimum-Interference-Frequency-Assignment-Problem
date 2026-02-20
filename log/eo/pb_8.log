@@ -1,0 +1,44 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	600 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		test.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		pb_8
+[runlim] argv[6]:		tot
+[runlim] argv[7]:		cadical103
+[runlim] argv[8]:		assumptions
+[runlim] start:			Mon Feb  9 20:43:31 2026
+[runlim] main pid:		112987
+Traceback (most recent call last):
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 610, in <module>
+    main()
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 581, in main
+    vertices, var_map, penalty_var_map, penalty_values = add_constraints(solver, num_frequencies, dataset, type_eo)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 31, in add_constraints
+    top = add_eo(solver, var_map, vertices, num_frequencies, top, type_eo)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 268, in add_eo
+    return eo_pb(solver, var_map, vertices, num_frequencies, top, strategy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/satsolver/Minimum-Interference-Frequency-Assignment-Problem/test.py", line 215, in eo_pb
+    pb = PBEnc.equals(
+         ^^^^^^^^^^^^^
+  File "/home/satsolver/.local/lib/python3.12/site-packages/pysat/pb.py", line 461, in equals
+    return cls._encode(lits, weights=weights, bound=bound, top_id=top_id,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/satsolver/.local/lib/python3.12/site-packages/pysat/pb.py", line 279, in _encode
+    raise(NoSuchEncodingError(encoding))
+pysat.pb.NoSuchEncodingError: 8
+[runlim] end:			Mon Feb  9 20:43:31 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] real:			0.42 seconds
+[runlim] time:			0.09 seconds
+[runlim] space:			33.5 MB
+[runlim] samples:		1

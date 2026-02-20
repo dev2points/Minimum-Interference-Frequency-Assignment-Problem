@@ -1,54 +1,104 @@
 [runlim] version:		1.10
 [runlim] time limit:		311040000 seconds
-[runlim] real time limit:	10 seconds
+[runlim] real time limit:	60 seconds
 [runlim] space limit:		7759 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
-[runlim] argv[2]:		two_solver.py
+[runlim] argv[2]:		test.py
 [runlim] argv[3]:		45-17
 [runlim] argv[4]:		7
 [runlim] argv[5]:		nsc
-[runlim] argv[6]:		nsc
+[runlim] argv[6]:		tot
 [runlim] argv[7]:		gluecard4
-[runlim] argv[8]:		incremental
-[runlim] start:			Sun Feb  8 21:37:52 2026
-[runlim] main pid:		14206
-Total penalty: 82
-Time: 0.01063394546508789
+[runlim] argv[8]:		assumptions
+[runlim] start:			Mon Feb  9 16:36:04 2026
+[runlim] main pid:		29836
+Total penalty: 66
+Time: 0.008668661117553711
 --------------------------------------------------
 
-Trying with at most 81 penalty...
-Total penalty: 67
-Time: 0.16719746589660645
+Trying with at most 65 penalty...
+Total penalty: 64
+Time: 0.052541255950927734
 --------------------------------------------------
 
-Trying with at most 66 penalty...
-Total penalty: 58
-Time: 0.2084178924560547
+Trying with at most 63 penalty...
+Total penalty: 62
+Time: 0.057378530502319336
 --------------------------------------------------
 
-Trying with at most 57 penalty...
-Total penalty: 56
-Time: 6.028338193893433
+Trying with at most 61 penalty...
+Total penalty: 55
+Time: 0.06525015830993652
 --------------------------------------------------
 
-Trying with at most 55 penalty...
+Trying with at most 54 penalty...
 Total penalty: 53
-Time: 7.423488140106201
+Time: 0.10581612586975098
 --------------------------------------------------
 
 Trying with at most 52 penalty...
+Total penalty: 52
+Time: 0.3516111373901367
+--------------------------------------------------
+
+Trying with at most 51 penalty...
 Total penalty: 51
-Time: 8.99394941329956
+Time: 0.48280954360961914
 --------------------------------------------------
 
 Trying with at most 50 penalty...
-[runlim] sample:		9.5 time, 10.1 real, 52.9 MB
-[runlim] end:			Sun Feb  8 21:38:02 2026
+Total penalty: 49
+Time: 0.6050705909729004
+--------------------------------------------------
+
+Trying with at most 48 penalty...
+Total penalty: 48
+Time: 0.6085155010223389
+--------------------------------------------------
+
+Trying with at most 47 penalty...
+Total penalty: 47
+Time: 1.6509582996368408
+--------------------------------------------------
+
+Trying with at most 46 penalty...
+Total penalty: 46
+Time: 2.4172356128692627
+--------------------------------------------------
+
+Trying with at most 45 penalty...
+Total penalty: 44
+Time: 2.4212257862091064
+--------------------------------------------------
+
+Trying with at most 43 penalty...
+[runlim] sample:		10.0 time, 10.1 real, 35.9 MB
+Total penalty: 42
+Time: 10.011017799377441
+--------------------------------------------------
+
+Trying with at most 41 penalty...
+[runlim] sample:		20.0 time, 20.1 real, 48.4 MB
+[runlim] sample:		30.0 time, 30.1 real, 61.6 MB
+[runlim] sample:		40.0 time, 40.1 real, 62.6 MB
+Total penalty: 40
+Time: 46.00827741622925
+--------------------------------------------------
+
+Trying with at most 39 penalty...
+Total penalty: 37
+Time: 46.013569355010986
+--------------------------------------------------
+
+Trying with at most 36 penalty...
+[runlim] sample:		50.0 time, 50.1 real, 65.8 MB
+[runlim] sample:		59.9 time, 60.1 real, 67.0 MB
+[runlim] end:			Mon Feb  9 16:37:04 2026
 [runlim] status:		out of time
 [runlim] result:		2
 [runlim] children:		0
-[runlim] real:			10.09 seconds
-[runlim] time:			9.54 seconds
-[runlim] space:			59.5 MB
-[runlim] samples:		100
+[runlim] real:			60.12 seconds
+[runlim] time:			59.94 seconds
+[runlim] space:			67.0 MB
+[runlim] samples:		600

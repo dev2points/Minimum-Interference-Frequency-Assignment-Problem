@@ -1,0 +1,142 @@
+[runlim] version:		1.10
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	600 seconds
+[runlim] space limit:		7759 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		test.py
+[runlim] argv[3]:		45-17
+[runlim] argv[4]:		7
+[runlim] argv[5]:		sc
+[runlim] argv[6]:		tot
+[runlim] argv[7]:		cadical103
+[runlim] argv[8]:		assumptions
+[runlim] start:			Mon Feb  9 17:53:31 2026
+[runlim] main pid:		51483
+Total penalty: 69
+Time: 0.008655071258544922
+--------------------------------------------------
+
+Trying with at most 68 penalty...
+Total penalty: 55
+Time: 0.16634249687194824
+--------------------------------------------------
+
+Trying with at most 54 penalty...
+Total penalty: 54
+Time: 0.807910680770874
+--------------------------------------------------
+
+Trying with at most 53 penalty...
+Total penalty: 47
+Time: 2.197422742843628
+--------------------------------------------------
+
+Trying with at most 46 penalty...
+Total penalty: 45
+Time: 3.763498544692993
+--------------------------------------------------
+
+Trying with at most 44 penalty...
+Total penalty: 43
+Time: 5.903659343719482
+--------------------------------------------------
+
+Trying with at most 42 penalty...
+[runlim] sample:		10.0 time, 10.6 real, 40.6 MB
+[runlim] sample:		19.9 time, 20.6 real, 44.6 MB
+Total penalty: 42
+Time: 24.826439142227173
+--------------------------------------------------
+
+Trying with at most 41 penalty...
+[runlim] sample:		30.0 time, 30.6 real, 43.0 MB
+Total penalty: 41
+Time: 32.41570043563843
+--------------------------------------------------
+
+Trying with at most 40 penalty...
+[runlim] sample:		40.0 time, 40.6 real, 53.6 MB
+Total penalty: 40
+Time: 42.65700840950012
+--------------------------------------------------
+
+Trying with at most 39 penalty...
+[runlim] sample:		49.9 time, 50.6 real, 60.1 MB
+Total penalty: 39
+Time: 50.42475867271423
+--------------------------------------------------
+
+Trying with at most 38 penalty...
+Total penalty: 38
+Time: 59.450995445251465
+--------------------------------------------------
+
+Trying with at most 37 penalty...
+[runlim] sample:		60.0 time, 60.6 real, 53.0 MB
+[runlim] sample:		70.0 time, 70.6 real, 54.9 MB
+[runlim] sample:		80.0 time, 80.6 real, 61.3 MB
+[runlim] sample:		89.9 time, 90.6 real, 69.0 MB
+[runlim] sample:		99.8 time, 100.6 real, 58.3 MB
+[runlim] sample:		109.8 time, 110.6 real, 64.0 MB
+[runlim] sample:		120.0 time, 120.6 real, 75.0 MB
+[runlim] sample:		130.0 time, 130.6 real, 75.0 MB
+[runlim] sample:		140.0 time, 140.6 real, 75.0 MB
+[runlim] sample:		149.9 time, 150.6 real, 85.5 MB
+[runlim] sample:		160.0 time, 160.6 real, 60.8 MB
+[runlim] sample:		170.0 time, 170.6 real, 81.1 MB
+[runlim] sample:		179.9 time, 180.6 real, 82.1 MB
+[runlim] sample:		190.0 time, 190.6 real, 82.1 MB
+[runlim] sample:		200.0 time, 200.6 real, 67.1 MB
+[runlim] sample:		209.9 time, 210.6 real, 67.7 MB
+[runlim] sample:		220.0 time, 220.6 real, 84.1 MB
+[runlim] sample:		230.0 time, 230.6 real, 84.5 MB
+[runlim] sample:		239.9 time, 240.6 real, 84.5 MB
+[runlim] sample:		249.9 time, 250.6 real, 84.3 MB
+Total penalty: 37
+Time: 258.92474150657654
+--------------------------------------------------
+
+Trying with at most 36 penalty...
+[runlim] sample:		260.0 time, 260.6 real, 95.5 MB
+[runlim] sample:		269.9 time, 270.6 real, 95.6 MB
+[runlim] sample:		279.9 time, 280.6 real, 95.6 MB
+[runlim] sample:		290.0 time, 290.6 real, 95.6 MB
+[runlim] sample:		299.9 time, 300.6 real, 95.6 MB
+[runlim] sample:		309.9 time, 310.6 real, 107.3 MB
+[runlim] sample:		320.0 time, 320.6 real, 107.3 MB
+[runlim] sample:		329.9 time, 330.6 real, 107.3 MB
+[runlim] sample:		339.9 time, 340.6 real, 87.8 MB
+[runlim] sample:		350.0 time, 350.6 real, 100.1 MB
+[runlim] sample:		360.0 time, 360.6 real, 100.1 MB
+[runlim] sample:		369.9 time, 370.6 real, 111.4 MB
+[runlim] sample:		379.9 time, 380.6 real, 77.4 MB
+[runlim] sample:		390.0 time, 390.6 real, 93.4 MB
+[runlim] sample:		399.9 time, 400.6 real, 106.7 MB
+[runlim] sample:		409.9 time, 410.6 real, 106.7 MB
+[runlim] sample:		420.0 time, 420.6 real, 122.6 MB
+[runlim] sample:		429.9 time, 430.6 real, 106.8 MB
+[runlim] sample:		439.9 time, 440.6 real, 106.8 MB
+[runlim] sample:		450.0 time, 450.6 real, 106.8 MB
+[runlim] sample:		460.0 time, 460.6 real, 112.0 MB
+[runlim] sample:		469.9 time, 470.6 real, 98.2 MB
+[runlim] sample:		480.0 time, 480.6 real, 81.4 MB
+[runlim] sample:		490.0 time, 490.6 real, 99.3 MB
+[runlim] sample:		499.9 time, 500.6 real, 132.5 MB
+[runlim] sample:		510.0 time, 510.6 real, 133.0 MB
+[runlim] sample:		520.0 time, 520.6 real, 113.7 MB
+[runlim] sample:		529.9 time, 530.6 real, 113.7 MB
+[runlim] sample:		539.9 time, 540.6 real, 116.9 MB
+[runlim] sample:		550.0 time, 550.6 real, 133.8 MB
+[runlim] sample:		559.9 time, 560.6 real, 134.5 MB
+[runlim] sample:		569.9 time, 570.6 real, 134.5 MB
+[runlim] sample:		580.0 time, 580.6 real, 134.5 MB
+[runlim] sample:		590.0 time, 590.6 real, 134.5 MB
+[runlim] end:			Mon Feb  9 18:03:31 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		0
+[runlim] real:			600.04 seconds
+[runlim] time:			599.31 seconds
+[runlim] space:			137.8 MB
+[runlim] samples:		5994
